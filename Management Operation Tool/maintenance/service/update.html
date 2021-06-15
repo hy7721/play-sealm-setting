@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service - 업데이트</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/main.css">
+
+  <!-- js -->
+  <script src="./assets/js/jquery-3.6.0.min.js"></script>
+  <script src="./assets/js/jquery.easing.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+</head>
+<body>
+  <div id="wrapper">
+    <div class="cont_wrap">
+
+      <!-- 헤더 영역 -->
+      <header class="cont_header">
+        <!-- 지역 및 게임 선택 영역 -->
+        <div class="wrap_select">
+          <label for="selectNation" class="sr_only">Choose a country</label>
+          <select name="nation" id="selectNation">
+            <option value="">&lsqb;Area&rsqb; Game</option>
+            <option value="taiwan">&lsqb;Taiwan&rsqb; SealM</option>
+            <option value="korea">&lsqb;Korea&rsqb; SealM</option>
+          </select>
+        </div>
+        <!-- GNB 영역 -->
+        <div class="wrap_gnb">
+          <ul class="list_gnb">
+            <!-- 활성화 > li 태그에 active 클래스 추가 -->
+            <li><a href="analysis.html" class="link_gnb">Analysis</a></li>
+            <li><a href="base.html" class="link_gnb">Base</a></li>
+            <li class="active"><a href="service.html" class="link_gnb">Service</a></li>
+            <li><a href="manager.html" class="link_gnb">Manager</a></li>
+            <li><a href="support.html" class="link_gnb">Support</a></li>
+            <li><a href="setting.html" class="link_gnb">Setting</a></li>
+          </ul>
+        </div>
+        <!-- 이름(권한) 표시 및 계정 설정 영역 -->
+        <div class="wrap_user">
+          <a href="#none" class="list_user">
+            <p class="link_user ellipsis">
+              <span class="txt_user">이름</span><span class="txt_adminlevel">&lpar;권한&rpar;</span>
+            </p>
+          </a>
+          <a href="#none" class="link_setting"><i class="ico_comm fas fa-cog"><span class="sr_only">설정 버튼</span></i>
+          </a>
+        </div>
+      </header>
+      <!-- // 헤더 영역 -->
+
+      <!-- 메인 영역 -->
+      <main class="cont_main">
+        <!-- SNB 영역 -->
+        <div class="wrap_aside">
+          <nav class="wrap_nav">
+            <strong class="tit_snb">Service</strong>
+            <ol class="wrap_snb">
+              <li class="list_snb active"><a href="#none" class="link_snb">점검<i class="fa fa-caret-down right"></i></a>
+                <ol class="wrap_submenu">
+                  <!-- 활성화 > li 태그에 active 클래스 추가 -->
+                  <li class="list_submenu"><a href="#none" class="link_submenu">점검현황</a></li>
+                  <li class="list_submenu"><a href="#none" class="link_submenu">점검설정</a></li>
+                  <li class="list_submenu active"><a href="update.html" class="link_submenu">업데이트</a></li>
+                  <li class="list_submenu"><a href="#none" class="link_submenu">접근관리</a></li>
+                </ol>
+              </li>
+              <li class="list_snb"><a href="#none" class="link_snb">상점<i class="fa fa-caret-down right"></i></a>
+                <!-- 활성화 > li 태그에 active 클래스 추가 -->
+                <ol class="wrap_submenu">
+                  <li class="list_submenu"><a href="#none" class="link_submenu">상품현황</a></li>
+                  <li class="list_submenu"><a href="#none" class="link_submenu">카테고리관리</a></li>
+                  <li class="list_submenu"><a href="#none" class="link_submenu">상품관리</a></li>
+                </ol>
+              </li>
+              <li class="list_snb"><a href="#none" class="link_snb">배너<i class="fa fa-caret-down right"></i></a>
+                <!-- 활성화 > li 태그에 active 클래스 추가 -->
+                <ol class="wrap_submenu">
+                  <li class="list_submenu"><a href="#none" class="link_submenu">인게임</a></li>
+                </ol>
+              </li>
+              <li class="list_snb"><a href="#none" class="link_snb">푸시<i class="fa fa-caret-down right"></i></a>
+                <ol class="wrap_submenu">
+                  <!-- 활성화 > li 태그에 active 클래스 추가 -->
+                  <li class="list_submenu"><a href="#none" class="link_submenu">메시지</a></li>
+                  <li class="list_submenu"><a href="#none" class="link_submenu">통계</a></li>
+                </ol>
+              </li>
+              <li class="list_snb"><a href="#none" class="link_snb">쿠폰<i class="fa fa-caret-down right"></i></a>
+                <ol class="wrap_submenu">
+                  <!-- 활성화 > li 태그에 active 클래스 추가 -->
+                  <li class="list_submenu"><a href="#none" class="link_submenu">일반쿠폰</a></li>
+                  <li class="list_submenu"><a href="#none" class="link_submenu">키워드쿠폰</a></li>
+                  <li class="list_submenu"><a href="#none" class="link_submenu">사용내역</a></li>
+                </ol>
+              </li>
+            </ol>
+          </nav>
+        </div>
+        <!-- 메인 컨텐츠 영역 -->
+        <div class="wrap_section">
+          <div class="inner_type2">
+            <div class="wrap_article">
+              <strong class="tit_section">: : 업데이트</strong>
+              <table class="wrap_table">
+                <thead>
+                  <tr>
+                    <td>스토어</td>
+                    <td>설정</td>
+                    <td>업데이트 버전</td>
+                    <td>관리 코드</td>
+                    <td>활성화</td>
+                    <td>적용</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>구글</td>
+                    <td>
+                      <button type="button" class="btn_gray">강제</button>
+                      <button type="button" class="btn_gray">권장</button>
+                    </td>
+                    <td>
+                      <label for="tableVersion"></label>
+                      <input type="text" id="tableVersion" name="tableVersion" placeholder="버전명을 입력하세요.">
+                    </td>
+                    <td>
+                      <input type="text" placeholder="관리코드를 입력하세요.">
+                    </td>
+                    <td>
+                      <button type="button" class="btn_gray">활성화</button>
+                    </td>
+                    <td>
+                      <button type="button" class="btn_gray">저장</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>ONE</td>
+                    <td>
+                      <button type="button" class="btn_gray">강제</button>
+                      <button type="button" class="btn_gray">권장</button>
+                    </td>
+                    <td>
+                      <label for="tableVersion"></label>
+                      <input type="text" id="tableVersion" name="tableVersion" placeholder="버전명을 입력하세요.">
+                    </td>
+                    <td>
+                      <input type="text" placeholder="관리코드를 입력하세요.">
+                    </td>
+                    <td>
+                      <button type="button" class="btn_gray">활성화</button>
+                    </td>
+                    <td>
+                      <button type="button" class="btn_gray">저장</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>애플</td>
+                    <td>
+                      <button type="button" class="btn_gray">강제</button>
+                      <button type="button" class="btn_gray">권장</button>
+                    </td>
+                    <td>
+                      <label for="tableVersion"></label>
+                      <input type="text" id="tableVersion" name="tableVersion" placeholder="버전명을 입력하세요.">
+                    </td>
+                    <td>
+                      <input type="text" placeholder="관리코드를 입력하세요.">
+                    </td>
+                    <td>
+                      <button type="button" class="btn_gray">활성화</button>
+                    </td>
+                    <td>
+                      <button type="button" class="btn_gray">저장</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="wrap_article">
+              <strong class="tit_section">: : 업데이트 내역</strong>
+                <table class="wrap_table">
+                  <thead>
+                    <tr>
+                      <td>스토어</td>
+                      <td>설정</td>
+                      <td>업데이트 버전</td>
+                      <td>버전 관리 코드</td>
+                      <td>활성화</td>
+                      <td>등록자</td>
+                      <td>등록일</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>구글</td>
+                      <td>
+                        <button type="button" class="btn_gray">강제</button>
+                        <button type="button" class="btn_gray">권장</button>
+                      </td>
+                      <td>
+                        <label for="tableVersion"></label>
+                        <input type="text" id="tableVersion" name="tableVersion" placeholder="버전명을 입력하세요.">
+                      </td>
+                      <td>
+                        <input type="text" placeholder="관리코드를 입력하세요.">
+                      </td>
+                      <td>
+                        <button type="button" class="btn_gray">활성화</button>
+                      </td>
+                      <td>
+                        <button type="button" class="btn_gray">저장</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>ONE</td>
+                      <td>
+                        <button type="button" class="btn_gray">강제</button>
+                        <button type="button" class="btn_gray">권장</button>
+                      </td>
+                      <td>
+                        <label for="tableVersion"></label>
+                        <input type="text" id="tableVersion" name="tableVersion" placeholder="버전명을 입력하세요.">
+                      </td>
+                      <td>
+                        <input type="text" placeholder="관리코드를 입력하세요.">
+                      </td>
+                      <td>
+                        <button type="button" class="btn_gray">활성화</button>
+                      </td>
+                      <td>
+                        <button type="button" class="btn_gray">저장</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>애플</td>
+                      <td>
+                        <button type="button" class="btn_gray">강제</button>
+                        <button type="button" class="btn_gray">권장</button>
+                      </td>
+                      <td>
+                        <label for="tableVersion"></label>
+                        <input type="text" id="tableVersion" name="tableVersion" placeholder="버전명을 입력하세요.">
+                      </td>
+                      <td>
+                        <input type="text" placeholder="관리코드를 입력하세요.">
+                      </td>
+                      <td>
+                        <button type="button" class="btn_gray">활성화</button>
+                      </td>
+                      <td>
+                        <button type="button" class="btn_gray">저장</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+      </main>
+      <!-- // 메인 영역 -->
+
+      <!-- 푸터 영역 -->
+      <footer class="cont_footer">
+        <strong class="txt_copyright">&copy; PLAYWITHGAMES. All Rights Reserved.</strong>
+      </footer>
+      <!-- // 푸터 영역 -->
+    </div>
+  </div>
+
+  <script>
+    $(".list_snb a").click(function () {
+      $(this).parent(".list_snb").children("ol").slideToggle("100");
+      $(this).find(".right").toggleClass("fa-caret-up fa-caret-down");
+    });
+  </script>
+
+</body>
+</html>
