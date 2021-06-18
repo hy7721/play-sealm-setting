@@ -15,8 +15,11 @@
   <script src="./assets/js/main.js"></script>
 </head>
 <body>
+
   <div id="wrapper" class="wrapper_type1">
     <div class="cont_wrap">
+
+      <!-- .inner_type1 -->
       <div class="inner_type1">
         <div class="cont_main_type1">
           <div class="cont_header_type1">
@@ -45,8 +48,8 @@
               </p>
               <!-- 소속 -->
               <div class="wrap_select_login">
-                <select name="group" id="selectGroup">
-                  <option value="">소속</option>
+                <select name="group" id="selectGroup" class="select_type1 select_group">
+                  <option selected>소속</option>
                   <option value="">Playwith</option>
                   <option value="">Playwith_사업</option>
                   <option value="">Playwith_운영</option>
@@ -56,8 +59,8 @@
               </div>
               <!-- 권한 -->
               <div class="wrap_select_login">
-                <select name="admin" id="selectAuthority">
-                  <option value="">권한</option>
+                <select name="admin" id="selectAuthority" class="select_type1 select_authority">
+                  <option selected>권한</option>
                   <option value="">Admin</option>
                   <option value="">Manager</option>
                   <option value="">Operator</option>
@@ -70,8 +73,9 @@
           </div>
         </div>
       </div>
+      <!-- // .inner_type1 -->
 
-      <!-- 레이어 팝업 영역 -->
+      <!-- 계정 신청 팝업 컨텐츠 영역 > .inner_type1 이후에 넣어주세요. -->
       <div class="wrap_popup alert_signup_03">
         <div class="popup_content">
           <p class="txt_popup">
@@ -81,8 +85,9 @@
         </div>
         <div class="wrap_dimmed"></div>
       </div>
+      <!-- // 계정 신청 팝업 컨텐츠 영역 -->
 
-      <!-- 레이어 팝업 메시지 > display: none;-->
+      <!-- 계정 신청 팝업 메시지 > display: none;-->
       <div style="display: none;">
         <!-- alert_signup_01 -->
         <div class="wrap_popup alert_signup_01">
@@ -119,7 +124,7 @@
           <div class="wrap_dimmed"></div>
         </div>
       </div>
-      <!-- // 레이어 팝업 메시지 > display: none;-->
+      <!-- // 계정 신청 팝업 메시지 > display: none;-->
     </div>
   </div>
 </body>
