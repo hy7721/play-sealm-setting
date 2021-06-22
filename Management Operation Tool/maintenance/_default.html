@@ -4,15 +4,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maintenance_default Page</title>
+  <title>Default Page</title>
 
   <!-- css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
   <link rel="stylesheet" href="./assets/css/main.css">
 
   <!-- js -->
   <script src="./assets/js/jquery-3.6.0.min.js"></script>
-  <script src="./assets/js/jquery.easing.min.js"></script>
+  <script src="./assets/js/jquery-ui.min.js"></script>
   <script src="./assets/js/main.js"></script>
 </head>
 <body>
@@ -24,7 +23,7 @@
         <!-- 지역 및 게임 선택 영역 -->
         <div class="wrap_select_nation">
           <label for="selectNation" class="sr_only">Choose a country</label>
-          <select name="nation" id="selectNation">
+          <select name="nation" id="selectNation" class="select_nation">
             <option value="">&lsqb;Area&rsqb; Game</option>
             <option value="">&lsqb;Taiwan&rsqb; SealM</option>
             <option value="">&lsqb;Korea&rsqb; SealM</option>
@@ -33,24 +32,26 @@
         <!-- GNB 영역 -->
         <div class="wrap_gnb">
           <ul class="list_gnb">
-            <!-- 활성화 > li 태그에 active 클래스 추가 -->
-            <li><a href="analysis.html" class="link_gnb">Analysis</a></li>
-            <li><a href="base.html" class="link_gnb">Base</a></li>
-            <li><a href="service.html" class="link_gnb">Service</a></li>
-            <li><a href="manager.html" class="link_gnb">Manager</a></li>
-            <li><a href="support.html" class="link_gnb">Support</a></li>
-            <li><a href="setting.html" class="link_gnb">Setting</a></li>
+            <li><a href="#none" class="link_gnb">GNB 1</a></li>
+            <li><a href="#none" class="link_gnb">GNB 2</a></li>
+            <li><a href="#none" class="link_gnb">GNB 3</a></li>
+            <li><a href="#none" class="link_gnb">GNB 4</a></li>
+            <li><a href="#none" class="link_gnb">GNB 5</a></li>
+            <li><a href="#none" class="link_gnb">GNB 6</a></li>
           </ul>
         </div>
         <!-- 이름(권한) 표시 및 계정 설정 영역 -->
         <div class="wrap_user">
-          <a href="#none" class="list_user">
-            <p class="link_user ellipsis">
-              <span class="txt_user">이름</span><span class="txt_authlevel">&lpar;권한&rpar;</span>
-            </p>
-          </a>
-          <a href="#none" class="link_setting"><i class="ico_comm fas fa-cog"><span class="sr_only">설정 버튼</span></i>
-          </a>
+
+          <button class="btn_user">
+            <span class="txt_user">이름</span><span class="txt_authlevel">&lpar;권한&rpar;</span>
+            <i class="ico_comm ico_setting"></i>
+          </button>
+          <div class="list_setuser">
+            <a href="#none">Authority</a>
+            <a href="#none">My Info</a>
+            <a href="#none">Logout</a>
+          </div>
         </div>
       </header>
       <!-- // 헤더 영역 -->
@@ -60,11 +61,10 @@
         <!-- SNB 영역 -->
         <div class="wrap_aside">
           <nav class="wrap_nav">
-            <strong class="tit_snb emph_g">SNB title</strong>
-            <ol class="wrap_snb">
-              <li class="list_snb"><a href="#none" class="link_snb">Menu 1<i class="ico_arrow fa fa-caret-down right"></i></a>
+            <strong class="tit_snb">SNB title</strong>
+            <ul class="wrap_snb">
+              <li class="list_snb"><a href="#none" class="link_snb">Menu 1<i class="ico_arrow right"></i></a>
                 <ol class="wrap_submenu">
-                  <!-- 활성화 > li 태그에 active 클래스 추가 -->
                   <li class="list_submenu"><a href="#none" class="link_submenu">Sub Menu 1</a></li>
                   <li class="list_submenu"><a href="#none" class="link_submenu">Sub Menu 2</a></li>
                   <li class="list_submenu"><a href="#none" class="link_submenu">Sub Menu 3</a></li>
@@ -72,9 +72,8 @@
                   <li class="list_submenu"><a href="#none" class="link_submenu">Sub Menu 5</a></li>
                 </ol>
               </li>
-              <li class="list_snb"><a href="#none" class="link_snb">Menu 2<i class="ico_arrow fa fa-caret-down right"></i></a>
+              <li class="list_snb"><a href="#none" class="link_snb">Menu 2<i class="ico_arrow right"></i></a>
                 <ol class="wrap_submenu">
-                  <!-- 활성화 > li 태그에 active 클래스 추가 -->
                   <li class="list_submenu"><a href="#none" class="link_submenu">Sub Menu 1</a></li>
                   <li class="list_submenu"><a href="#none" class="link_submenu">Sub Menu 2</a></li>
                   <li class="list_submenu"><a href="#none" class="link_submenu">Sub Menu 3</a></li>
@@ -82,9 +81,8 @@
                   <li class="list_submenu"><a href="#none" class="link_submenu">Sub Menu 5</a></li>
                 </ol>
               </li>
-              <li class="list_snb"><a href="#none" class="link_snb">Menu 3<i class="ico_arrow fa fa-caret-down right"></i></a>
+              <li class="list_snb"><a href="#none" class="link_snb">Menu 3<i class="ico_arrow right"></i></a>
                 <ol class="wrap_submenu">
-                  <!-- 활성화 > li 태그에 active 클래스 추가 -->
                   <li class="list_submenu"><a href="#none" class="link_submenu">Sub Menu 1</a></li>
                   <li class="list_submenu"><a href="#none" class="link_submenu">Sub Menu 2</a></li>
                   <li class="list_submenu"><a href="#none" class="link_submenu">Sub Menu 3</a></li>
@@ -92,9 +90,8 @@
                   <li class="list_submenu"><a href="#none" class="link_submenu">Sub Menu 5</a></li>
                 </ol>
               </li>
-              <li class="list_snb"><a href="#none" class="link_snb">Menu 4<i class="ico_arrow fa fa-caret-down right"></i></a>
+              <li class="list_snb"><a href="#none" class="link_snb">Menu 4<i class="ico_arrow right"></i></a>
                 <ol class="wrap_submenu">
-                  <!-- 활성화 > li 태그에 active 클래스 추가 -->
                   <li class="list_submenu"><a href="#none" class="link_submenu">Sub Menu 1</a></li>
                   <li class="list_submenu"><a href="#none" class="link_submenu">Sub Menu 2</a></li>
                   <li class="list_submenu"><a href="#none" class="link_submenu">Sub Menu 3</a></li>
@@ -102,9 +99,8 @@
                   <li class="list_submenu"><a href="#none" class="link_submenu">Sub Menu 5</a></li>
                 </ol>
               </li>
-              <li class="list_snb"><a href="#none" class="link_snb">Menu 5<i class="ico_arrow fa fa-caret-down right"></i></a>
+              <li class="list_snb"><a href="#none" class="link_snb">Menu 5<i class="ico_arrow right"></i></a>
                 <ol class="wrap_submenu">
-                  <!-- 활성화 > li 태그에 active 클래스 추가 -->
                   <li class="list_submenu"><a href="#none" class="link_submenu">Sub Menu 1</a></li>
                   <li class="list_submenu"><a href="#none" class="link_submenu">Sub Menu 2</a></li>
                   <li class="list_submenu"><a href="#none" class="link_submenu">Sub Menu 3</a></li>
@@ -112,9 +108,8 @@
                   <li class="list_submenu"><a href="#none" class="link_submenu">Sub Menu 5</a></li>
                 </ol>
               </li>
-              <li class="list_snb"><a href="#none" class="link_snb">Menu 6<i class="ico_arrow fa fa-caret-down right"></i></a>
+              <li class="list_snb"><a href="#none" class="link_snb">Menu 6<i class="ico_arrow right"></i></a>
                 <ol class="wrap_submenu">
-                  <!-- 활성화 > li 태그에 active 클래스 추가 -->
                   <li class="list_submenu"><a href="#none" class="link_submenu">Sub Menu 1</a></li>
                   <li class="list_submenu"><a href="#none" class="link_submenu">Sub Menu 2</a></li>
                   <li class="list_submenu"><a href="#none" class="link_submenu">Sub Menu 3</a></li>
@@ -126,7 +121,390 @@
           </nav>
         </div>
         <!-- 메인 컨텐츠 영역 -->
-        <div class="wrap_contents_type2"></div>
+        <div class="wrap_contents_type2">
+          <div class="inner_type2">
+            <div class="wrap_article">
+              <strong class="tit_section">Authority</strong>
+              <div id="wrap_tabs">
+                <ul class="list_tabs">
+                  <!-- ui-state-active 클래스 추가 > 활성화-->
+                  <li><a href="#sectionTab1" class="link_tabs">계정 신청 현황</a></li>
+                  <li><a href="#sectionTab2" class="link_tabs">계정 권한 설정</a></li>
+                  <li><a href="#sectionTab3" class="link_tabs">권한 설정 로그</a></li>
+                </ul>
+                <div id="sectionTab1">
+                  <table class="wrap_table table_type1">
+                    <thead>
+                      <tr>
+                        <td>Check</td>
+                        <td>Full Name</td>
+                        <td>Account (E-mail)</td>
+                        <td>소속</td>
+                        <td>권한</td>
+                        <td>신청일</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <label for="authorityChecked"></label>
+                          <input type="checkbox" name="checkbox" id="authorityChecked">
+                        </td>
+                        <td>이사람</td>
+                        <td>asdf@playwith.co.kr</td>
+                        <td>PLAYWITH TAIWAN</td>
+                        <td>Manager</td>
+                        <td>06/03/2021 22:22:33</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label for="authorityChecked"></label>
+                          <input type="checkbox" name="checkbox" id="authorityChecked">
+                        </td>
+                        <td>저사람</td>
+                        <td>asdf@playwith.co.kr</td>
+                        <td>PLAYWITH Inc.</td>
+                        <td>Operator</td>
+                        <td>06/03/2021 22:22:33</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="wrap_button">
+                    <button type="button" class="btn_gray" onclick="layerPopupOpen('alert_login_01'); return false;">승인</button>
+                    <button type="button" class="btn_gray" onclick="layerPopupOpen('alert_login_01'); return false;">반려</button>
+
+                  </div>
+                </div>
+                <div id="sectionTab2">
+                  <table class="wrap_table table_type1">
+                    <thead>
+                      <tr>
+                        <td>No</td>
+                        <td>Full Name</td>
+                        <td>Account (E-mail)</td>
+                        <td>소속</td>
+                        <td>서비스</td>
+                        <td>권한</td>
+                        <td>등록일</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>일사람</td>
+                        <td>ppp@playwith.co.kr</td>
+                        <td>PLAYWITH TAIWAN</td>
+                        <td>-</td>
+                        <td>MANAGER</td>
+                        <td>06/03/2021</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>이사람</td>
+                        <td>123@playwith.co.kr</td>
+                        <td>PLAYWITH Inc.</td>
+                        <td>-</td>
+                        <td>Operator</td>
+                        <td>06/03/2021</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>삼사람</td>
+                        <td>asdf@playwith.co.kr</td>
+                        <td>PLAYWITH TAIWAN</td>
+                        <td>
+                          [Taiwan] SealM
+                          [Korea] SealM
+                        </td>
+                        <td>Admin</td>
+                        <td>01/01/2021</td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>7</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>8</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>9</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>10</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>11</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>12</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>13</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>14</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="wrap_pagination">
+                    <a href="#" class="btn_prev">&lt;<span class="sr_only">Previous button</span></a>
+                    <ol class="list_pagination">
+                      <li class="active"><a href="#none">1</a></li>
+                      <li><a href="#none">2</a></li>
+                      <li><a href="#none">3</a></li>
+                      <li><a href="#none">4</a></li>
+                      <li><a href="#none">5</a></li>
+                      <li><a href="#none">6</a></li>
+                      <li><a href="#none">7</a></li>
+                      <li><a href="#none">8</a></li>
+                      <li><a href="#none">9</a></li>
+                      <li><a href="#none">10</a></li>
+                      <li><a href="#none">11</a></li>
+                      <li><a href="#none">12</a></li>
+                      <li><a href="#none">13</a></li>
+                      <li><a href="#none">14</a></li>
+                      <li><a href="#none">15</a></li>
+                      <li><a href="#none">16</a></li>
+                      <li><a href="#none">17</a></li>
+                      <li><a href="#none">18</a></li>
+                      <li><a href="#none">19</a></li>
+                      <li><a href="#none">20</a></li>
+                    </ol>
+                    <a href="#" class="btn_next">&gt;<span class="sr_only">Next button</span></a>
+                  </div>
+                </div>
+                <div id="sectionTab3">
+                  <table class="wrap_table table_type1">
+                    <thead>
+                      <tr>
+                        <td>No</td>
+                        <td>수정일</td>
+                        <td>권한 수정자</td>
+                        <td>권한 변경자</td>
+                        <td>소속</td>
+                        <td>권한</td>
+                        <td>IP</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>06/04/2021 10:00:10</td>
+                        <td>그사람</td>
+                        <td>이사람</td>
+                        <td>PLAYWITH TAIWAN</td>
+                        <td>Manager</td>
+                        <td>000.000.000.000</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>06/04/2021 10:00:10</td>
+                        <td>그사람</td>
+                        <td>이사람</td>
+                        <td>PLAYWITH TAIWAN</td>
+                        <td>Operator</td>
+                        <td>000.000.000.000</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>06/04/2021 10:00:10</td>
+                        <td>그사람</td>
+                        <td>이사람</td>
+                        <td>PLAYWITH TAIWAN</td>
+                        <td>Manager</td>
+                        <td>000.000.000.000</td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>06/04/2021 10:00:10</td>
+                        <td>그사람</td>
+                        <td>이사람</td>
+                        <td>PLAYWITH TAIWAN</td>
+                        <td>Manager</td>
+                        <td>000.000.000.000</td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="wrap_pagination">
+                    <a href="#" class="btn_prev">&lt;<span class="sr_only">Previous button</span></a>
+                    <ol class="list_pagination">
+                      <li class="active"><a href="#none">1</a></li>
+                      <li><a href="#none">2</a></li>
+                      <li><a href="#none">3</a></li>
+                      <li><a href="#none">4</a></li>
+                      <li><a href="#none">5</a></li>
+                      <li><a href="#none">6</a></li>
+                      <li><a href="#none">7</a></li>
+                      <li><a href="#none">8</a></li>
+                      <li><a href="#none">9</a></li>
+                      <li><a href="#none">10</a></li>
+                      <li><a href="#none">11</a></li>
+                      <li><a href="#none">12</a></li>
+                      <li><a href="#none">13</a></li>
+                      <li><a href="#none">14</a></li>
+                      <li><a href="#none">15</a></li>
+                      <li><a href="#none">16</a></li>
+                      <li><a href="#none">17</a></li>
+                      <li><a href="#none">18</a></li>
+                      <li><a href="#none">19</a></li>
+                      <li><a href="#none">20</a></li>
+                    </ol>
+                    <a href="#" class="btn_next">&gt;<span class="sr_only">Next button</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 팝업 컨텐츠 영역 > .cont_main_type2 이후에 넣어주세요. -->
+        <div class="wrap_popup alert_login_01" style="display: block;">
+          <div class="popup_content popup_type2">
+            <table class="wrap_table table_type2">
+              <thead>
+                <tr>
+                  <td>Full Name</td>
+                  <td>Account (E-mail)</td>
+                  <td>소속</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <select name="full name" id="selectUser" class="select_type1 select_user">
+                      <option selected>선택</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                    </select>
+                  </td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="wrap_table table_type2">
+              <thead>
+                <tr>
+                  <td>[Area] Game</td>
+                  <td>권한</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <select name="full name" id="selectUser" class="select_type1 select_user">
+                      <option selected>선택</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select name="full name" id="selectUser" class="select_type1 select_user">
+                      <option selected>선택</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                    </select>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="wrap_dimmed"></div>
+        </div>
+        <!-- 팝업 컨텐츠 영역 > .cont_main_type2 이후에 넣어주세요. -->
+
       </main>
       <!-- // 메인 영역 -->
 
@@ -138,14 +516,4 @@
     </div>
   </div>
 
-  <script>
-    $(".list_snb ol").hide();
-
-    $(".list_snb a").click(function () {
-      $(this).parent(".list_snb").children("ol").slideToggle("100");
-      $(this).find(".right").toggleClass("fa-caret-up fa-caret-down");
-    });
-  </script>
-
-</body>
 </html>

@@ -7,11 +7,11 @@
   <title>Sign up</title>
 
   <!-- css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
-  <link rel="stylesheet" href="../maintenance/assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/main.css">
 
   <!-- js -->
   <script src="./assets/js/jquery-3.6.0.min.js"></script>
+  <script src="./assets/js/jquery-ui.min.js"></script>
   <script src="./assets/js/main.js"></script>
 </head>
 <body>
@@ -69,63 +69,28 @@
               </div>
             </form>
             <!-- submit 버튼 -->
-            <button type="button" class="btn_submit alert_signup_03" onclick="layerPopupOpen('alert_signup_03'); return false;">Submit</button>
+            <button type="button" class="btn_submit" onclick="layerPopupOpen('alert_login_01'); return false;">Submit</button>
           </div>
         </div>
       </div>
       <!-- // .inner_type1 -->
 
-      <!-- 계정 신청 팝업 컨텐츠 영역 > .inner_type1 이후에 넣어주세요. -->
-      <div class="wrap_popup alert_signup_03">
-        <div class="popup_content">
+      <!-- 레이어 팝업 영역 > .inner_type1 이후에 넣어주세요. -->
+      <div class="wrap_popup alert_login_01" style="display: block;">
+        <div class="popup_content popup_type1">
           <p class="txt_popup">
-            %%를 입력해 주세요.
+            E-mail 형식이 올바르지 않습니다.
+            <br>
+            다시 입력해 주세요.
           </p>
-          <button type="button" onclick="layerPopupClose(); return false;" class="btn_close btn_comm btn_gray">OK</button>
+          <button type="button" onclick="layerPopupClose(); return false;" class="btn_gray">OK</button>
         </div>
         <div class="wrap_dimmed"></div>
       </div>
-      <!-- // 계정 신청 팝업 컨텐츠 영역 -->
+      <!-- // 레이어 팝업 영역 > .inner_type1 이후에 넣어주세요. -->
 
-      <!-- 계정 신청 팝업 메시지 > display: none;-->
-      <div style="display: none;">
-        <!-- alert_signup_01 -->
-        <div class="wrap_popup alert_signup_01">
-          <div class="popup_content">
-            <p class="txt_popup">
-              E-mail 형식이 올바르지 않습니다.
-              <br>
-              다시 입력해 주세요.
-            </p>
-            <button type="button" onclick="layerPopupClose(); return false;" class="btn_close btn_comm btn_gray">OK</button>
-          </div>
-          <div class="wrap_dimmed"></div>
-        </div>
-        <!-- alert_signup_02 -->
-        <div class="wrap_popup alert_signup_02">
-          <div class="popup_content">
-            <p class="txt_popup">
-              비밀번호가 일치하지 않았습니다.
-              <br>
-              다시 입력해 주세요.
-            </p>
-            <button type="button" onclick="layerPopupClose(); return false;" class="btn_close btn_comm btn_gray">OK</button>
-          </div>
-          <div class="wrap_dimmed"></div>
-        </div>
-        <!-- alert_signup_03 -->
-        <div class="wrap_popup alert_signup_03">
-          <div class="popup_content">
-            <p class="txt_popup">
-              %%를 입력해 주세요.
-            </p>
-            <button type="button" onclick="layerPopupClose(); return false;" class="btn_close btn_comm btn_gray">OK</button>
-          </div>
-          <div class="wrap_dimmed"></div>
-        </div>
-      </div>
-      <!-- // 계정 신청 팝업 메시지 > display: none;-->
     </div>
   </div>
+  
 </body>
 </html>
