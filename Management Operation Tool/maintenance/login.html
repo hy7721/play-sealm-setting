@@ -38,11 +38,17 @@
             <strong class="tit_login">Login</strong>
             <form action="#none" method="post" id="formType1">
               <!-- Account(E-mail) -->
-              <input type="email" id="loginEmail" name="user email" class="input_type1" autocapitalize="off" data-mode="eng" placeholder="Account (E-mail)" required>
+              <label for="loginEmail">
+                <input type="email" id="loginEmail" name="user email" class="input_type1" autocapitalize="off" data-mode="eng" placeholder="Account (E-mail)" required>
+              </label>
               <!-- Password -->
-              <input type="password" id="loginPwd" name="user password" class="input_type1" placeholder="Password" required>
+              <label for="loginPwd">
+                <input type="password" id="loginPwd" name="user password" class="input_type1" placeholder="Password" required>
+              </label>
               <!-- OTP -->
-              <input type="text" id="loginOtp" name="userotp" class="input_type1" placeholder="OTP" required>
+              <label for="loginOtp">
+                <input type="text" id="loginOtp" name="userotp" class="input_type1" placeholder="OTP" required>
+              </label>
             </form>
             <!-- 로그인 버튼 -->
             <button type="button" class="btn_submit" onclick="layerPopupOpen('alert_login_01'); return false;">Login</button>
@@ -61,10 +67,10 @@
 
       <!-- 레이어 팝업 영역 > .inner_type1 이후에 넣어주세요. -->
       <div class="wrap_popup alert_login_01" style="display: block;">
-        <div class="popup_content popup_type1">
+        <div class="popup_type1">
           <p class="txt_popup">
             정보가 일치하지 않습니다.
-
+            <br>
             다시 입력해 주세요.
           </p>
           <button type="button" onclick="layerPopupClose(); return false;" class="btn_gray">OK</button>
