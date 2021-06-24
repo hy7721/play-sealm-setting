@@ -1,3 +1,2 @@
-# Management Operating Tool
-
+# Operations Management Tool
 운영툴 작업물입니다. (2021. 06. 14 ~ )
