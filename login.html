@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="./assets/css/main.css">
+
+  <!-- js -->
+  <script src="./assets/js/jquery-3.6.0.min.js"></script>
+  <script src="./assets/js/jquery-ui.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+</head>
+<body>
+  <div id="wrapper" class="wrapper_type1">
+    <div class="cont_wrap">
+
+      <!-- .inner_type1 -->
+      <div class="inner_type1">
+        <div class="wrap_select_lang">
+          <select name="language" id="selectLanguage" class="select_type1 select_lang">
+            <option value="selected">Location</option>
+            <option value="">대한민국</option>
+            <option value="">English</option>
+            <option value="">中文</option>
+          </select>
+        </div>
+        <div class="cont_main_type1">
+          <div class="cont_header_type1">
+            <a href="#none" class="link_main">
+              <strong class="tit_logo">Playground</strong>
+            </a>
+          </div>
+          <div class="wrap_contents_type1">
+            <strong class="tit_login">Login</strong>
+            <form action="#none" method="post" id="formType1">
+              <!-- Account(E-mail) -->
+              <label for="loginEmail">
+                <input type="email" id="loginEmail" name="user email" class="input_type1" autocapitalize="off" data-mode="eng" placeholder="Account (E-mail)" required>
+              </label>
+              <!-- Password -->
+              <label for="loginPwd">
+                <input type="password" id="loginPwd" name="user password" class="input_type1" placeholder="Password" required>
+              </label>
+              <!-- OTP -->
+              <label for="loginOtp">
+                <input type="text" id="loginOtp" name="userotp" class="input_type1" placeholder="OTP" required>
+              </label>
+            </form>
+            <!-- 로그인 버튼 -->
+            <button type="button" class="btn_submit" onclick="layerPopupOpen('alert_login_01'); return false;">Login</button>
+          </div>
+          <div class="cont_footer_type1">
+            <a href="#none" class="link_login">
+              <span class="txt_link">Change Password</span>
+            </a>
+            <p class="txt_dsc">
+              신규 이용자는 <a href="signup.html" class="link_signup"><span class="txt_link">계정등록</span></a> 후 이용할 수 있습니다.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- // .inner_type1 -->
+
+      <!-- 레이어 팝업 영역 > .inner_type1 이후에 넣어주세요. -->
+      <div class="wrap_popup alert_login_01" style="display: block;">
+        <div class="popup_type1">
+          <p class="txt_popup">
+            정보가 일치하지 않습니다.
+            <br>
+            다시 입력해 주세요.
+          </p>
+          <button type="button" onclick="layerPopupClose(); return false;" class="btn_gray">OK</button>
+        </div>
+        <div class="wrap_dimmed"></div>
+      </div>
+      <!-- // 레이어 팝업 영역 > .inner_type1 이후에 넣어주세요. -->
+
+    </div>
+  </div>
+</body>
+</html>
