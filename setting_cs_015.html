@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support > CS > 처리현황</title>
+
+  <!-- css -->
+  <!-- <link href="./assets/css/jquery-ui.css" rel="stylesheet"> -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet"><!-- bootstrap 3.4.1 only -->
+  <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet"><!-- editor -->
+  <link href="./assets/css/main.css" rel="stylesheet">
+
+  <!-- js -->
+  <script src="./assets/js/jquery-3.6.0.min.js"></script>
+  <script src="./assets/js/jquery-ui.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script><!-- bootstrap 3.4.1 only -->
+  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script><!-- editor -->
+  <script src="./assets/js/summernote-table.js"></script>
+  <script src="./assets/js/main.js"></script>
+</head>
+<body>
+  <!-- #wrapper -->
+  <div id="wrapper">
+    <div class="cont_wrap">
+      <header class="cont_header_type2"></header>
+      <main class="cont_main_type2">
+        <div class="wrap_aside"></div>
+        <!-- 메인 컨텐츠 영역 -->
+        <div class="wrap_contents_type2">
+          <div class="inner_type2">
+            <div class="wrap_article">
+              <strong><span class="tit_section">담당설정</span></strong></strong>
+              <!-- CS > 담당설정 -->
+              <ul class="table_type1">
+                <!-- 테이블 헤더 부분 -->
+                <!-- 테이블 헤더의 background-color 변경을 위해 .title_table 클래스를 추가  -->
+                <li class="list_table title_table">
+                  <div class="item_table item_table1"><strong>항목</strong></div>
+                  <div class="item_table item_table2"><strong>변경일시</strong></div>
+                  <div class="item_table item_table3"><strong>변경</strong></div>
+                </li>
+                <!-- 문의 1 -->
+                <li class="list_table">
+                  <div class="item_table item_table1">
+                    <div class="wrap_subtit_table">
+                      <a href="#none" class="tit_cs">문의</a>
+                      <div class="wrap_option">
+                        <select name="select a person in charge" id="selectType" class="select_type3">
+                          <option selected="">운영</option>
+                          <option value="">운영2</option>
+                          <option value="">운영3</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item_table item_table2">2021.05.10 23:59</div>
+                  <div class="item_table item_table3">백승훈</div>
+                  <ul class="list_table_depth">
+                    <li>
+                      <div class="item_table item_table1">
+                        <div class="wrap_cont_table">
+                          <a href="#none" class="txt_cs"><span>&#8210;&nbsp;</span>설치&sol;실행</a>
+                          <div class="wrap_option">
+                            <select name="select a person in charge" id="selectType" class="select_type3">
+                              <option selected="">운영1</option>
+                              <option value="">운영2</option>
+                              <option value="">운영3</option>
+                            </select>
+                            <button type="button" class="btn_more">+</button>
+                            <button type="button" class="btn_less">-</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item_table item_table2">2021.05.10 23:59</div>
+                      <div class="item_table item_table3">박보라</div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="wrap_button_type2">
+                <button type="button" class="btn_save" value="저장" onclick="layerPopupOpen('alert_save'); return false;">
+                  <span>저장</span>
+                </button>  
+              </div>
+              <!-- // CS > 담당설정 -->
+            </div>
+          </div>
+        </div>
+        <!-- // 메인 컨텐츠 영역 -->
+      </main>
+      <footer class="cont_footer_type2">
+        <strong class="txt_copyright align_left">&copy; PLAYWITHGAMES.</strong>
+      </footer>
+    </div>
+  </div><!-- // #wrapper -->
+
+  <!-- 팝업 영역 > 추가 -->
+  <div class="wrap_popup alert_add">
+    <div class="popup_type3">
+      <div class="popup_type3_items">
+        <strong><span class="tit_popup">항목</span></strong>
+        <label for="addFaq">
+          <input type="text" id="addFaq" name="add faq list" class="input_type2" placeholder="100byte까지 입력할 수 있습니다." required>
+        </label>
+        <div class="wrap_button_type2">
+          <button type="button" class="btn_b_blue" onclick="layerPopupClose(); return false;">
+            <span>등록</span>
+          </button>
+          <button type="button" class="btn_b_blue" onclick="layerPopupClose(); return false;">
+            <span>취소</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="wrap_dimmed"></div>
+  </div>
+  <!-- // 팝업 영역 > 추가 -->
+  <!-- 팝업 영역 > 저장 -->
+  <div class="wrap_popup alert_save">
+    <div class="popup_type1">
+      <p class="txt_popup">저장되었습니다.</p>
+      <button type="button" onclick="layerPopupClose(); return false;" class="btn_gray">OK</button>
+    </div>
+    <div class="wrap_dimmed"></div>
+  </div>
+  <!-- // 팝업 영역 > 저장 -->
+  <!-- 팝업 영역 > 수정 -->
+  <div class="wrap_popup alert_modify">
+    <div class="popup_type1">
+      <p class="txt_popup">수정되었습니다.</p>
+      <button type="button" onclick="layerPopupClose(); return false;" class="btn_gray">OK</button>
+    </div>
+    <div class="wrap_dimmed"></div>
+  </div>
+  <!-- // 팝업 영역 > 수정 -->
+</body></html>

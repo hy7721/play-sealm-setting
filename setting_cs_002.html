@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support > 메뉴관리 > FAQ</title>
+
+  <!-- css -->
+  <!-- <link href="./assets/css/jquery-ui.css" rel="stylesheet"> -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet"><!-- bootstrap 3.4.1 only -->
+  <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet"><!-- editor -->
+  <link href="./assets/css/main.css" rel="stylesheet">
+
+  <!-- js -->
+  <script src="./assets/js/jquery-3.6.0.min.js"></script>
+  <script src="./assets/js/jquery-ui.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script><!-- bootstrap 3.4.1 only -->
+  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script><!-- editor -->
+  <script src="./assets/js/summernote-table.js"></script>
+  <script src="./assets/js/main.js"></script>
+</head>
+<body>
+  <!-- #wrapper -->
+  <div id="wrapper">
+    <div class="cont_wrap">
+      <header class="cont_header_type2"></header>
+      <main class="cont_main_type2">
+        <div class="wrap_aside"></div>
+        <!-- 메인 컨텐츠 영역 -->
+        <div class="wrap_contents_type2">
+          <div class="inner_type2">
+            <div class="wrap_article">
+              <strong><span class="tit_section sr_only">처리현황</span></strong>
+              <div class="wrap_tabs">
+                <ul class="list_tabs">
+                  <!-- ui-state-active 클래스 추가 > 활성화-->
+                  <li class="ui-state-active"><a href="#sectionTab1" class="link_tabs">전체현황</a></li>
+                  <li><a href="#sectionTab2" class="link_tabs">문의처리</a></li>
+                  <li><a href="#sectionTab3" class="link_tabs">템플릿 관리</a></li>
+                </ul>
+                <!-- tab contents 1 -->
+                <div id="sectionTab1">
+                  <div class="wrap_datesrch">
+                    <label for="searchStart">
+                      <!-- 2022.1.19 input 타입 변경 -->
+                      <input type="date" id="searchStart" name="search start" class="input_type3" value="" min="" max="">
+                      <!-- // 2022.1.19 input 타입 변경 -->
+                    </label>
+                    <label for="searchEnd">
+                      <!-- 2022.1.19 input 타입 변경 -->
+                      <input type="date" id="searchEnd" name="search end" class="input_type3" value="" min="" max="">
+                      <!-- // 2022.1.19 input 타입 변경 -->
+                    </label>
+                    <select name="faq type" id="selectType" class="select_type2">
+                      <option selected>유형</option>
+                      <option value="">설치&#x2f;실행</option>
+                      <option value="">게임관련</option>
+                      <option value="">신고</option>
+                      <option value="">기타</option>
+                    </select>
+                    <select name="faq status" id="selectStatus" class="select_type2">
+                      <option selected>상태</option>
+                      <option value="">접수</option>
+                      <option value="">처리중</option>
+                      <option value="">중간답변</option>
+                      <option value="">답변완료</option>
+                    </select>
+                    <input type="text" class="input_type3" placeholder="AUID">
+                    <input type="text" class="input_type3" placeholder="제목">
+                    <button type="button" class="btn_srch" onclick="srchResult();">검색</button>
+                  </div>
+                  <div class="wrap_data"><!-- 컨텐츠 간 간격을 위한 클래스(mb-20px) -->
+                    <table class="wrap_table table_type1">
+                      <thead>
+                        <tr>
+                          <td>유형</td>
+                          <td>담당</td>
+                          <td>처리중</td>
+                          <td>중간답변</td>
+                          <td>답변완료</td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>설치&#x2f;실행</td>
+                          <td>운영1</td>
+                          <td>12</td>
+                          <td>3</td>
+                          <td>1532</td>
+                        </tr>
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <td colspan="2">총계</td>
+                          <td>73</td>
+                          <td>29</td>
+                          <td>9094</td>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+                  <div class="wrap_data"><!-- 컨텐츠 간 간격을 위한 클래스(mb-20px) -->
+                    <!-- 검색 결과 노출(검색 버튼 클릭 시) -->
+                    <div class="table_result">
+                      <table class="wrap_table table_type1">
+                        <thead>
+                          <tr>
+                            <td>처리</td>
+                            <td>유형</td>
+                            <td>담당</td>
+                            <td>접수일</td>
+                            <td>AUID</td>
+                            <td>제목</td>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!-- 답변완료 상태일 때 faq_done 클래스 추가-->
+                          <tr class="faq_done">
+                            <td>답변완료</td>
+                            <td>설치&#x2f;실행</td>
+                            <td>운영1</td>
+                            <td>2021.05.10 23:59</td>
+                            <td>
+                              <a href="#none" target="_blank" class="link_table">11b23a</a>
+                            </td>
+                            <td>
+                              <a href="#none" class="link_table">환불해주세요</a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="wrap_pagination">
+                        <a href="#" class="btn_prev">&lt;<span class="sr_only">Previous button</span></a>
+                        <ol class="list_pagination">
+                          <li class="active"><a href="#none">1</a></li>
+                          <li><a href="#none">2</a></li>
+                          <li><a href="#none">3</a></li>
+                        </ol>
+                        <a href="#" class="btn_next">&gt;<span class="sr_only">Next button</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- tab contents 2 -->
+                <div id="sectionTab2">
+                  <table class="wrap_table table_type1">
+                    <thead>
+                      <tr>
+                        <td>
+                          <select name="faq status" id="selectStatus" class="select_type1">
+                            <option selected>상태</option>
+                            <option value="">접수</option>
+                            <option value="">처리중</option>
+                            <option value="">중간답변</option>
+                            <option value="">답변완료</option>
+                          </select>
+                        </td>
+                        <td>
+                          <select name="faq type" id="selectType" class="select_type1">
+                            <option selected>유형</option>
+                            <option value="">설치&#x2f;실행</option>
+                            <option value="">게임관련</option>
+                            <option value="">신고</option>
+                            <option value="">기타</option>
+                          </select>
+                        </td>
+                        <td>담당</td>
+                        <td>접수일</td>
+                        <td>AUID</td>
+                        <td>제목</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>접수</td>
+                        <td>기타</td>
+                        <td>운영1</td>
+                        <td>2021.05.10 23:59</td>
+                        <td>acb123</td>
+                        <td>
+                          <a href="#none" class="link_table">환불해주세요</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>접수</td>
+                        <td>기타</td>
+                        <td>운영1</td>
+                        <td>2021.05.10 23:59</td>
+                        <td>acb123</td>
+                        <td>
+                          <a href="#none" class="link_table">환불해주세요</a>
+                        </td>
+                      </tr>
+                      <!-- 답변완료 상태일 때 faq_done 클래스 추가-->
+                      <tr class="faq_done">
+                        <td>답변완료</td>
+                        <td>기타</td>
+                        <td>운영1</td>
+                        <td>2021.05.10 23:59</td>
+                        <td>acb23a</td>
+                        <td>
+                          <a href="#none" class="link_table">환불해주세요</a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="wrap_pagination">
+                    <a href="#" class="btn_prev">&lt;<span class="sr_only">Previous button</span></a>
+                    <ol class="list_pagination">
+                      <li class="active"><a href="#none">1</a></li>
+                      <li><a href="#none">2</a></li>
+                      <li><a href="#none">3</a></li>
+                    </ol>
+                    <a href="#" class="btn_next">&gt;<span class="sr_only">Next button</span></a>
+                  </div>
+                </div>
+                <!-- tab contents 3 -->
+                <div id="sectionTab3">
+                  <table class="wrap_table table_type1">
+                    <thead>
+                      <tr>
+                        <td>No</td>
+                        <td>수정일</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>06/04/2021 10:00:10</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>06/04/2021 10:00:10</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="wrap_pagination">
+                    <a href="#" class="btn_prev">&lt;<span class="sr_only">Previous button</span></a>
+                    <ol class="list_pagination">
+                      <li class="active"><a href="#none">1</a></li>
+                      <li><a href="#none">2</a></li>
+                      <li><a href="#none">3</a></li>
+                    </ol>
+                    <a href="#" class="btn_next">&gt;<span class="sr_only">Next button</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- // 메인 컨텐츠 영역 -->
+      </main>
+      <footer class="cont_footer_type2">
+        <strong class="txt_copyright align_left">&copy; PLAYWITHGAMES.</strong>
+      </footer>
+    </div>
+  </div><!-- // #wrapper -->
+
+  <!-- 팝업 영역 > 추가 -->
+  <div class="wrap_popup alert_add">
+    <div class="popup_type3">
+      <div class="popup_type3_items">
+        <strong><span class="tit_popup">항목</span></strong>
+        <label for="addFaq">
+          <input type="text" id="addFaq" name="add faq list" class="input_type2" placeholder="100byte까지 입력할 수 있습니다." required>
+        </label>
+        <div class="wrap_button_type2">
+          <button type="button" class="btn_b_blue" onclick="layerPopupClose(); return false;">
+            <span>등록</span>
+          </button>
+          <button type="button" class="btn_b_blue" onclick="layerPopupClose(); return false;">
+            <span>취소</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="wrap_dimmed"></div>
+  </div>
+  <!-- // 팝업 영역 > 추가 -->
+  <!-- 팝업 영역 > 저장 -->
+  <div class="wrap_popup alert_save">
+    <div class="popup_type1">
+      <p class="txt_popup">저장되었습니다.</p>
+      <button type="button" onclick="layerPopupClose(); return false;" class="btn_gray">OK</button>
+    </div>
+    <div class="wrap_dimmed"></div>
+  </div>
+  <!-- // 팝업 영역 > 저장 -->
+  <!-- 팝업 영역 > 수정 -->
+  <div class="wrap_popup alert_modify">
+    <div class="popup_type1">
+      <p class="txt_popup">수정되었습니다.</p>
+      <button type="button" onclick="layerPopupClose(); return false;" class="btn_gray">OK</button>
+    </div>
+    <div class="wrap_dimmed"></div>
+  </div>
+  <!-- // 팝업 영역 > 수정 -->
+
+</body></html>

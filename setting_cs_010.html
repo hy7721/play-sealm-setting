@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support > CS > 처리현황</title>
+
+  <!-- css -->
+  <!-- <link href="./assets/css/jquery-ui.css" rel="stylesheet"> -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet"><!-- bootstrap 3.4.1 only -->
+  <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet"><!-- editor -->
+  <link href="./assets/css/main.css" rel="stylesheet">
+
+  <!-- js -->
+  <script src="./assets/js/jquery-3.6.0.min.js"></script>
+  <script src="./assets/js/jquery-ui.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script><!-- bootstrap 3.4.1 only -->
+  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script><!-- editor -->
+  <script src="./assets/js/summernote-table.js"></script>
+  <script src="./assets/js/main.js"></script>
+</head>
+<body>
+  <!-- #wrapper -->
+  <div id="wrapper">
+    <div class="cont_wrap">
+      <header class="cont_header_type2"></header>
+      <main class="cont_main_type2">
+        <div class="wrap_aside"></div>
+        <!-- 메인 컨텐츠 영역 -->
+        <div class="wrap_contents_type2">
+          <div class="inner_type2">
+            <div class="wrap_article">
+              <strong><span class="tit_section sr_only">처리현황</span></strong>
+              <div class="wrap_tabs">
+                <ul class="list_tabs">
+                  <!-- ui-state-active 클래스 추가 > 활성화-->
+                  <li><a href="#sectionTab3" class="link_tabs">템플릿 관리</a></li>
+                </ul>
+                <!-- tab contents 3 -->
+                <div id="sectionTab3">
+                  <div class="wrap_data"><!-- 컨텐츠 간 간격을 위한 클래스(mb-20px) -->
+                    <!-- 2022.1.19 추가 -->
+                    <ul class="list_editor">
+                      <li>
+                        <label for="editorTitle"></label>
+                        <input type="text" id="editorTitle" name="title" class="input_type2 tit_summernote" placeholder="제목을 입력해주세요." value="" min="" max="">
+                        <button type="button" class="btn_summernote" onclick=""><span class="sr_only">아코디언 메뉴 버튼</span></button>
+                        <div class="wrap_editor_summer">
+                          <div class="summernote" id="summernote"></div>
+                          <div class="wrap_button_type2">
+                            <button type="button" class="btn_save" value="수정" onclick="layerPopupOpen('alert_modify'); return false;">
+                              <span>수정</span>
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                    <!-- // 2022.1.19 추가 -->
+                  </div>
+                  <div class="wrap_data create_newnote"><!-- 컨텐츠 간 간격을 위한 클래스, 에디터 추가 버튼 포함된 div -->
+                    <!-- 2022.1.19 추가 -->
+                    <ul class="list_editor">
+                      <li>
+                        <label for="editorTitle"></label>
+                        <input type="text" id="editorTitle" name="title" class="input_type2 tit_summernote" placeholder="제목을 입력해주세요." value="" min="" max="">
+                        <button type="button" class="btn_summernote" onclick=""><span class="sr_only">아코디언 메뉴 버튼</span></button>
+                        <div class="wrap_editor_summer">
+                          <div class="summernote" id="summernote"></div>
+                          <div class="wrap_button_type2">
+                            <button type="button" class="btn_save" value="저장" onclick="layerPopupOpen('alert_save'); return false;">
+                              <span>저장</span>
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                    <!-- // 2022.1.19 추가 -->
+                  </div>
+                  <div class="wrap_button_type2">
+                    <!-- editor 추가 버튼 -->
+                    <button type="button" class="btn_create" value="create new editor">
+                      <span>&#43;</span>
+                      <span class="sr_only">추가</span>
+                    </button>
+                    <!-- editor 추가 버튼 -->
+                    <button type="button" class="btn_save" value="저장" onclick="layerPopupOpen('alert_save'); return false;">
+                      <span>저장</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- // 메인 컨텐츠 영역 -->
+      </main>
+      <footer class="cont_footer_type2">
+        <strong class="txt_copyright align_left">&copy; PLAYWITHGAMES.</strong>
+      </footer>
+    </div>
+  </div><!-- // #wrapper -->
+
+  <!-- 팝업 영역 > 추가 -->
+  <div class="wrap_popup alert_add">
+    <div class="popup_type3">
+      <div class="popup_type3_items">
+        <strong><span class="tit_popup">항목</span></strong>
+        <label for="addFaq">
+          <input type="text" id="addFaq" name="add faq list" class="input_type2" placeholder="100byte까지 입력할 수 있습니다." required>
+        </label>
+        <div class="wrap_button_type2">
+          <button type="button" class="btn_b_blue" onclick="layerPopupClose(); return false;">
+            <span>등록</span>
+          </button>
+          <button type="button" class="btn_b_blue" onclick="layerPopupClose(); return false;">
+            <span>취소</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="wrap_dimmed"></div>
+  </div>
+  <!-- // 팝업 영역 > 추가 -->
+  <!-- 팝업 영역 > 저장 -->
+  <div class="wrap_popup alert_save">
+    <div class="popup_type1">
+      <p class="txt_popup">저장되었습니다.</p>
+      <button type="button" onclick="layerPopupClose(); return false;" class="btn_gray">OK</button>
+    </div>
+    <div class="wrap_dimmed"></div>
+  </div>
+  <!-- // 팝업 영역 > 저장 -->
+  <!-- 팝업 영역 > 수정 -->
+  <div class="wrap_popup alert_modify">
+    <div class="popup_type1">
+      <p class="txt_popup">수정되었습니다.</p>
+      <button type="button" onclick="layerPopupClose(); return false;" class="btn_gray">OK</button>
+    </div>
+    <div class="wrap_dimmed"></div>
+  </div>
+  <!-- // 팝업 영역 > 수정 -->
+
+</body></html>
